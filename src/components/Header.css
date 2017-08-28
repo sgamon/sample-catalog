@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.page-title {
+  font-size: 26px;
+  margin: 0px;
+}
+.buttons {
+  display: inline-flex;
+  align-items: flex-start;
+}
+.header .buttons button {
+  padding: 11px 20px;
+  border: 1px solid #DEDEDE;
+  background-color: #FFFFFF;
+  color: #586B7D;
+  font-size: 14px;
+}
+.header .buttons button {
+  margin-right: 20px;
+}
+.header .buttons button:last-of-type {
+  margin-right: 0px;
+}
+.header .buttons button.active {
+  background-color: #0076FF;
+  color: #FFFFFF;
+}

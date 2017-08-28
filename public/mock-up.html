@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mock Up</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+  <script src="https://use.fontawesome.com/004ef969dd.js"></script>
+
+  <style>
+    Body {
+      font-family: 'Lato', sans-serif !important;
+    }
+
+    .content-panel {
+      margin: 10px;
+      padding: 25px 45px;
+      border: 1px solid #DEDEDE;
+      max-width: 780px;
+    }
+
+    .header {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .page-title {
+      font-size: 26px;
+      margin: 0px;
+    }
+
+    .buttons {
+      display: inline-flex;
+      align-items: flex-start;
+    }
+
+    .header .buttons button {
+      padding: 11px 20px;
+      border: 1px solid #DEDEDE;
+      background-color: #FFFFFF;
+      color: #586B7D;
+      font-size: 14px;
+    }
+
+    .header .buttons button {
+      margin-right: 20px;
+    }
+
+    .header .buttons button:last-of-type {
+      margin-right: 0px;
+    }
+
+    .footer .buttons button {
+      padding: 8px 9px;
+      border: 1px solid #DEDEDE;
+      background-color: #FFFFFF;
+      color: #586B7D;
+      font-size: 14px;
+    }
+
+    i.fa {
+      color: #586B7D;
+    }
+
+    .footer .buttons button {
+      margin: 0px 10px 0px 0px;
+    }
+
+    .footer .buttons .styled-select {
+      margin-right: 10px;
+    }
+
+    .footer .buttons button:last-of-type {
+      margin-right: 0px;
+    }
+
+    .header .buttons button.active {
+      background-color: #0076FF;
+      color: #FFFFFF;
+    }
+
+    .search-bar {
+      margin-top: 30px;
+      display: flex;
+    }
+
+    .search-box {
+      border: 1px solid #DEDEDE;
+      position: relative;
+      width: 192px;
+      height: 40px;
+    }
+
+    .search-box i {
+      display: inline-block;
+      position: absolute;
+      top: 12px;
+      left: 20px;
+    }
+
+    .search-box input[type=text] {
+      display: inline-block;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      font-size: 14px;
+      color: #586B7D;
+      padding: 11px 40px;
+      width: 112px;
+      border: none;
+      background-color: transparent;
+    }
+
+    .search-box input[type=text]:focus {
+      border: none;
+    }
+
+    .price-box {
+      display: inline-block;
+      border: 1px solid #DEDEDE;
+      position: relative;
+      width: 75px;
+      height: 36px;
+    }
+
+    .price-box i {
+      display: inline-block;
+      position: absolute;
+      top: 12px;
+      left: 10px;
+    }
+
+    .selected .price-box input[type=text] {
+      display: inline-block;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      font-size: 14px;
+      color: #586B7D;
+      padding: 10px 5px;
+      width: 65px;
+      border: none;
+      background-color: transparent;
+    }
+
+    .footer {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      color: #586B7D;
+      margin-top: 8px;
+    }
+
+    .items-per-page {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .items-per-page label {
+      display: inline-block;
+      padding-right: 15px;
+      font-size: 12px;
+    }
+
+    .styled-select select {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      background: transparent;
+      width: 75px;
+      padding: 7px 13px;
+      font-size: 14px;
+      line-height: 1;
+      border: 0;
+      border-radius: 0;
+      height: 33px;
+      -webkit-appearance: none;
+      z-index: 1;
+    }
+
+    .styled-select {
+      display: inline-flex;
+      position: relative;
+      text-align: right;
+      width: 75px;
+      height: 34px;
+      overflow: hidden;
+      border: 1px solid #DEDEDE;
+    }
+
+    .styled-select i {
+      position: absolute;
+      top: 7px;
+      right: 11px;
+      font-weight: 100;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    tr {
+      border-bottom: 1px solid #DEDEDE;
+    }
+
+    td {
+      padding: 0px 0px 15px 0px;
+      margin: 0px;
+    }
+
+    .select-item {
+      padding: 0px 15px;
+    }
+
+    .thumbnail {
+      padding: 8px 10px 8px 0px;
+    }
+
+    .name {
+      padding: 15px 30px 15px 0px;
+      max-width: 200px;
+    }
+
+    .selected .name {
+      padding: 10px 30px 10px 0px;
+    }
+
+    .type {
+      padding: 15px 70px 15px 0px;
+    }
+
+    .selected .type {
+      padding: 10px 70px 10px 0px;
+    }
+
+    .price {
+      padding: 15px 70px 15px 0px;
+      text-align: right;
+    }
+
+    .selected .price {
+      padding: 10px 70px 10px 0px;
+    }
+
+    .inventory {
+      padding: 15px 70px 15px 0px;
+      text-align: right;
+    }
+
+    selected .inventory {
+      padding: 10px 70px 10px 0px;
+      text-align: right;
+    }
+
+    th {
+      text-align: left;
+    }
+
+    th i {
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    th.price {
+      text-align: right;
+    }
+
+    input[type=checkbox] {
+      border: 1px solid #DEDEDE;
+      font-size: 16px;
+    }
+
+    tr.selected {
+      background-color: #F8F9FA;
+    ;
+    }
+
+    .selected input[type=text] {
+      font-size: 14px;
+      color: #586B7D;
+      padding: 10px 5px;
+      width: 100%;
+      border: 1px solid #DEDEDE;
+      background-color: transparent;
+    }
+
+    .selected .type .styled-select {
+      width: 110px;
+    }
+
+    .selected .type select {
+      width: 110px;
+    }
+
+    .selected .price input[type=text] {
+      max-width: 75px;
+      text-align: right;
+    }
+
+    .selected .inventory input[type=text] {
+      max-width: 50px;
+      text-align: right;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <!-- outer page frame with border -->
+  <div class="content-panel">
+    <form name="catalogForm">
+
+    <!-- header row ---------------------------------------------------------->
+    <div class="header">
+      <h1 class="page-title">Products</h1>
+      <div class="buttons">
+        <button type="button">Export</button>
+        <button type="button">Import</button>
+        <button type="button" class="active">Add Product</button>
+      </div>
+    </div>
+    <!-- /header row --------------------------------------------------------->
+
+
+    <!-- search bar ----------------------- ----------------------------------->
+    <div class="search-bar">
+      <div class="search-box">
+        <i class="fa fa-search"></i>
+        <input type="text" name="search" placeholder="Search..." />
+      </div>
+    </div>
+    <!-- /search bar --------------------------------------------------------->
+
+
+    <!-- product table ------------------------------------------------------->
+    <table width="100%">
+      <thead>
+        <tr>
+          <th class="select-item"><input type="checkbox"></th>
+          <th class="name" colspan="2">Name <i class="fa fa-caret-down"></i></th>
+          <th class="type">Type <i class="fa fa-caret-down"></i></th>
+          <th class="price">Price <i class="fa fa-caret-down"></i></th>
+          <th class="inventory">Inventory <i class="fa fa-caret-down"></i></th>
+        </tr>
+
+      </thead>
+      <tbody>
+        <tr>
+          <td class="select-item"><input type="checkbox"></td>
+          <td class="thumbnail"><i class="fa fa-camera"></i></td>
+          <td class="name">This Is A Thing</td>
+          <td class="type">Physical</td>
+          <td class="price">$19.99</td>
+          <td class="inventory">12</td>
+        </tr>
+        <tr class="selected">
+          <td class="select-item"><input type="checkbox" checked></td>
+          <td class="thumbnail"><i class="fa fa-camera"></i></td>
+          <td class="name"><input type="text" name="name" value="This Is A Thing" /></td>
+          <td class="type">
+            <div class="styled-select">
+              <select name="type">
+                <option>Physical</option>
+                <option>Virtual</option>
+              </select>
+              <i class="fa fa-chevron-down"></i>
+            </div>
+          </td>
+          <td class="price">
+            <div class="price-box">
+              <i class="fa fa-usd"></i>
+              <input type="text" name="price" value="19.99" />
+            </div>
+          </td>
+          <td class="inventory"><input type="text" name="inventory" value="12" /></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <!-- /product table ------------------------------------------------------>
+
+
+
+    <!-- footer row ---------------------------------------------------------->
+    <div class="footer">
+
+      <div class="items-per-page">
+        <label>Items per page:</label>
+        <div class="styled-select">
+          <select name="itemsPerPage">
+            <option>5</option>
+            <option selected>10</option>
+            <option>15</option>
+          </select>
+          <i class="fa fa-chevron-down"></i>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button type="button"><i class="fa fa-chevron-left"></i></button>
+        <div class="styled-select">
+          <select name="itemsPerPage">
+            <option>1</option>
+            <option>2</option>
+          </select>
+          <i class="fa fa-chevron-down"></i>
+        </div>
+        <button type="button"><i class="fa fa-chevron-right"></i></button>
+      </div>
+    </div>
+    <!-- /footer row --------------------------------------------------------->
+
+    </form>
+  </div>
+  <!-- /outer page frame with border -->
+
+</body>
+</html>
