@@ -1,9 +1,9 @@
 {
   "name": "sample-catalog",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": ">=0.18.1",
     "bootstrap": "^3.3.7",
     "lodash": "^4.17.4",
     "lodash-isnumeric": "^1.0.0",
